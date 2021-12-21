@@ -1,0 +1,28 @@
+
+<%- include('./partials/head.ejs') %> 
+<%- include('./partials/nav.ejs') %> 
+    <main>
+        <table>
+            <tr>
+                <td>
+                    Nombre
+                </td>
+                <td>
+                    Precio
+                </td>
+            </tr>
+            <% if (productos.length > 0) { %>
+             <% productos.forEach(pr => { %>
+                <tr>
+                    <td>
+                       <%= pr.name %>
+                    </td>
+                    <td>
+                        <%= pr.precio %>
+                    </td>
+                </tr>
+             <% }) %>
+            <% } %>
+        </table>
+    </main>
+<%- include('./partials/footer.ejs') %> 
